@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+
+	<!--[if lt IE 9]>
+  <script src="../lib/html5shim.js"></script>
+  <![endif]-->
+
+	<!-- These are some core styles the slideshow app requires -->
+	<link rel="stylesheet" href="../lib/styles.css" />
+
+	<!-- These are the styles you'll add to make the slides look great -->
+	<link rel="stylesheet" href="css/styles.css" />
+
+	<title>Example Slideshow</title>
+</head>
+
+<body>
+	<!-- <header> -->
+	<!-- <h1>Example Slide Show</h1>
+		<nav>
+			<ul> -->
+	<!-- <li><button id="prev-btn" title="Previous slide">Previous Slide</button></li> -->
+	<!-- <li><span id="slide-number"></span>/<span id="slide-total"></span></li> -->
+	<!-- <li><button id="next-btn" title="Next Slide">Next Slide</button></li> -->
+	<!-- 
+			</ul>
+		</nav>
+	</header> -->
+	<div id="deck">
+
+		<!-- Begin slides -->
+		<!-- <section>
+			<hgroup>
+				<h1>Hello, interwebs explorer.</h1>
+				<h2>How to use this thing</h2>
+			</hgroup>
+			<p>Press the right arrow, down arrow, or spacebar to advance; press the left arrow or up arrow to move
+				backward.</p>
+			<p>You can also click the left and right arrows in the control bar at the top.</p>
+		</section> -->
+
+		<!-- <section>
+			<hgroup>
+				<h1>Custom events</h1>
+				<h2>These may or may not be useful for you</h2>
+			</hgroup>
+			<p>When a new slide is loaded, a "newSlide" event is fired. (Take a look at your console.)</p>
+			<p>There's also an event triggered when a new "action" is revealed.</p>
+			<pre>
+//Example usage
+$(&#x27;html&#x27;).bind(&#x27;newSlide&#x27;, function(e,id) { console.log(id) });
+  		</pre>
+		</section> -->
+		<section>
+			<button class="buttonList next-btn" id="button-1">다음</button>
+
+			<img src="images/1_1.png" />
+		</section>
+		<section>
+			<button class="buttonList next-btn" id="button-2">다음</button>
+
+			<!-- <button class="buttonList" id="next-btn">다음</button> -->
+			<img src="images/1_2.png" />
+
+		</section>
+		<section>
+			<button class="buttonList next-btn">다음</button>
+
+
+			<img src="images/1_3.png" />
+
+		</section>
+		<section>
+			<button class="buttonList next-btn">다음</button>
+
+
+			<img src="images/1_4.png" />
+
+		</section>
+		<section>
+			<button class="buttonList next-btn">다음</button>
+
+
+			<img src="images/1_5.png" />
+
+		</section>
+		<section>
+			<hgroup>
+				<h1>Other details</h1>
+				<h2>Small stuff</h2>
+			</hgroup>
+			<p>The hash updates with each slide.</p>
+			<p>The slideshow itself has 3 dependencies: jQuery, htmlSlides.js, and a small stylesheet.</p>
+			<p>The slide script has one option, the option to hide the toolbar at the top:</p>
+			<pre>
+htmlSlides.init({ toolbar: true });
+  		</pre>
+		</section>
+		<section>
+			<hgroup>
+				<h1>That's all</h1>
+			</hgroup>
+			<p>Get it at <a href="http://github.com/robflaherty/html-slideshow">github</a>.</p>
+			<p>- Rob Flaherty / <a href="http://twitter.com/robflaherty">@robflaherty</a> / <a
+					href="mailto:rob@ravelrumba.com">rob@ravelrumba.com</a></p>
+		</section>
+		<!-- /End slides -->
+
+	</div>
+	<!-- /deck -->
+	<script src="../lib/jquery-1.5.2.min.js"></script>
+	<script src="../lib/jquery.jswipe-0.1.2.js"></script>
+	<script src="../lib/htmlSlides.js"></script>
+	<script>
+		//Do our business when the DOM is ready for us
+		$(function () {
+
+			//You can trigger Javascript based on the slide number like this:
+			$('html').bind('newSlide', function (e, id) {
+				switch (id) {
+					case 2:
+						console.log('This is the second slide.');;
+						break;
+					case 3:
+						console.log('Hello, third slide.');
+						break;
+				}
+			});
+
+			//One little option: hideToolbar (boolean; default = false)
+			htmlSlides.init({ hideToolbar: true });
+
+		});
+	</script>
+</body>
+
+</html>
