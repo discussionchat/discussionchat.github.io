@@ -32,15 +32,17 @@
 	<div id="deck">
 
 		<!-- Begin slides -->
-		<!-- <section>
-			<hgroup>
-				<h1>Hello, interwebs explorer.</h1>
-				<h2>How to use this thing</h2>
-			</hgroup>
-			<p>Press the right arrow, down arrow, or spacebar to advance; press the left arrow or up arrow to move
-				backward.</p>
-			<p>You can also click the left and right arrows in the control bar at the top.</p>
-		</section> -->
+		<section>
+			<div class="first-slide">
+				<hgroup>
+					<h1>안녕하세요.</h1>
+					<h2>솔루션챗을 사용하기 위한<br> 안내서 입니다.</h2>
+				</hgroup>
+				<p>다음 버튼을 클릭하시면서, 내용을 읽어주세요!</p>
+				<button class="buttonList_header next-btn" id="button-0">네</button>
+
+			</div>
+		</section>
 
 		<!-- <section>
 			<hgroup>
@@ -67,27 +69,78 @@ $(&#x27;html&#x27;).bind(&#x27;newSlide&#x27;, function(e,id) { console.log(id) 
 
 		</section>
 		<section>
-			<button class="buttonList next-btn">다음</button>
+			<button class="buttonList next-btn" id="button-3">다음</button>
 
 
 			<img src="./example/images/1_3.png" />
 
 		</section>
 		<section>
-			<button class="buttonList next-btn">다음</button>
+			<button class="buttonList next-btn" id="button-4">다음</button>
 
 
 			<img src="./example/images/1_4.png" />
 
 		</section>
 		<section>
-			<button class="buttonList next-btn">다음</button>
+			<button class="buttonList next-btn" id="button-5">다음</button>
 
 
 			<img src="./example/images/1_5.png" />
 
 		</section>
 		<section>
+			<button class="buttonList next-btn" id="button-6">다음</button>
+
+
+			<img src="./example/images/2-1.png" />
+
+		</section>
+		<section>
+			<button class="buttonList next-btn" id="button-7">다음</button>
+
+
+			<img src="./example/images/2-2.png" />
+
+		</section>
+		<section>
+			<button class="buttonList next-btn" id="button-8">다음</button>
+
+
+			<img src="./example/images/2-3.png" />
+
+		</section>
+		<!-- <section>
+			<button class="buttonList next-btn" id="button-9">다음</button>
+
+
+			<img src="./example/images/2-4.png" />
+
+		</section> -->
+		<section>
+			<button class="buttonList next-btn" id="button-10">다음</button>
+
+
+			<img src="./example/images/2-5.png" />
+
+		</section>
+		<section>
+			<button class="buttonList next-btn" id="button-11">다음</button>
+
+
+			<img src="./example/images/2-6.png" />
+
+		</section>
+		<section>
+			<button class="buttonList next-btn" id="button-12">다음</button>
+			<img src="./example/images/2-7.png" />
+		</section>
+		<section>
+			<button class="buttonList next-btn" id="button-13">네</button>
+			<img src="./example/images/2-8.png" />
+
+		</section>
+		<!-- <section>
 			<hgroup>
 				<h1>Other details</h1>
 				<h2>Small stuff</h2>
@@ -98,43 +151,43 @@ $(&#x27;html&#x27;).bind(&#x27;newSlide&#x27;, function(e,id) { console.log(id) 
 			<pre>
 htmlSlides.init({ toolbar: true });
   		</pre>
-		</section>
+		</section> -->
 		<section>
 			<hgroup>
-				<h1>That's all</h1>
+				<h1>튜토리얼이 모두 끝났습니다. 감사합니다.</h1>
+				<h2><a href="https://discussion0waitingroom.github.io/#enter-discussionroom">대기실로 돌아가기</a></h2>
+
 			</hgroup>
-			<p>Get it at <a href="http://github.com/robflaherty/html-slideshow">github</a>.</p>
-			<p>- Rob Flaherty / <a href="http://twitter.com/robflaherty">@robflaherty</a> / <a
-					href="mailto:rob@ravelrumba.com">rob@ravelrumba.com</a></p>
-		</section>
-		<!-- /End slides -->
+
+		</section> -->
+		<!-- /End slides
 
 	</div>
 	<!-- /deck -->
-	<script src="./lib/jquery-1.5.2.min.js"></script>
-	<script src="./lib/jquery.jswipe-0.1.2.js"></script>
-	<script src="./lib/htmlSlides.js"></script>
-	<script>
-		//Do our business when the DOM is ready for us
-		$(function () {
+		<script src="./lib/jquery-1.5.2.min.js"></script>
+		<script src="./lib/jquery.jswipe-0.1.2.js"></script>
+		<script src="./lib/htmlSlides.js"></script>
+		<script>
+			//Do our business when the DOM is ready for us
+			$(function () {
 
-			//You can trigger Javascript based on the slide number like this:
-			$('html').bind('newSlide', function (e, id) {
-				switch (id) {
-					case 2:
-						console.log('This is the second slide.');;
-						break;
-					case 3:
-						console.log('Hello, third slide.');
-						break;
-				}
+				//You can trigger Javascript based on the slide number like this:
+				$('html').bind('newSlide', function (e, id) {
+					switch (id) {
+						case 2:
+							console.log('This is the second slide.');;
+							break;
+						case 3:
+							console.log('Hello, third slide.');
+							break;
+					}
+				});
+
+				//One little option: hideToolbar (boolean; default = false)
+				htmlSlides.init({ hideToolbar: true });
+
 			});
-
-			//One little option: hideToolbar (boolean; default = false)
-			htmlSlides.init({ hideToolbar: true });
-
-		});
-	</script>
+		</script>
 </body>
 
 </html>
