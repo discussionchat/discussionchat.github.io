@@ -10,6 +10,7 @@
 
 body {
   background: #f5f6f6;
+  position: relative;
 }
 #deck h1 {
   font-family: "ChunkFiveRegular", Arial;
@@ -107,11 +108,7 @@ button#button-13 {
   border: 1px solid;
   color: grey;
   text-align: center;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+
   margin: auto;
 }
 
