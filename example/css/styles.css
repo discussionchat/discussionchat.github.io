@@ -102,14 +102,13 @@ button#button-13 {
 }
 
 .first-slide {
-  width: 500px;
-  height: 500px;
-  border-radius: 30px;
-  border: 1px solid;
-  color: grey;
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
   text-align: center;
-
-  margin: auto;
+  padding: 25px;
+  -ms-transform: translateY(70%);
+  transform: translateY(70%);
 }
 
 button#button-0 {
@@ -117,7 +116,7 @@ button#button-0 {
 }
 
 .slide hgroup {
-  padding: 10%;
+  /* padding: 5%; */
 }
 
 button.buttonList_header {
@@ -129,4 +128,10 @@ button.buttonList_header {
   color: white;
   border-radius: 25px;
   background-color: #1fcd97;
+}
+
+button#button-14 {
+  top: 50%;
+  width: 200px;
+  height: 50px;
 }
